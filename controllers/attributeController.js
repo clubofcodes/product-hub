@@ -44,4 +44,18 @@ exports.getAttributes = async (req, res) => {
   }
 };
 
-// You can add more controller functions for edit, delete, etc.
+exports.deleteAttribute = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const deletedAttribute = await Attribute.findByIdAndDelete(id);
+
+    if (!deletedAttribute) {
+      return res.status(404).json({ message: "Attribute not found." });
+    }
+
+    res.status(200).json({ message: "Attribute deleted successfully." });
+  } catch (error) {
+    res.status(500).json({ message: "Server error. Please try again later." });
+  }
+};

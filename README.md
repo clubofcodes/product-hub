@@ -1,2 +1,11 @@
-# product-hub
-A Node.js backend application designed for managing product catalogs. It utilizes Express.js for building RESTful APIs, Mongoose for MongoDB interaction, and Multer for handling file uploads.
+# Product Hub Backend
+
+A Node.js API service for managing products, categories and attributes with image upload support.
+
+## Installation
+
+Download this project zip or clone:
+
+###### To clone in local system.
+
+- git clone [https://github.com/clubofcodes/product-hub.git](https://github.com/clubofcodes/product-hub.git)
